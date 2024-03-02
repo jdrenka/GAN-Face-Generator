@@ -1,0 +1,30 @@
+h1 {
+    font-family: 'Arial', sans-serif; /* Choose a modern, readable font */
+    font-size: 2.5rem; /* Adjust size as needed */
+    color: #757850; /* Dark gray for contrast against light backgrounds */
+    text-align: center; /* Centers the header text */
+    margin-top: 20px; /* Adds space above the header */
+    margin-bottom: 20px; /* Adds space below the header */
+    text-transform: uppercase; /* Makes the text uppercase for added emphasis */
+    letter-spacing: 1.5px; /* Increases spacing between letters */
+    word-spacing: 3px; /* Increases spacing between words */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.9); /* Subtle shadow for depth */
+}
+
+.app_panel{
+    position: absolute;
+    height:95%;
+    width:95%;
+    margin-top: 1%;
+    margin-left: 2%;
+    background-color: rgb(77, 86, 86);
+    box-shadow: 8px 8px 6px rgba(0, 0, 0, 0.1), /* Primary shadow */
+    4px 4px 4px rgba(0, 0, 0, 0.06), /* Secondary shadow for more depth */
+    -8px 0 6px rgba(0, 0, 0, 0.1); /* Primary shadow to the left */
+    border-radius: 50px;
+}
+
+
+#mainheader{
+    font-size: 60px;
+}

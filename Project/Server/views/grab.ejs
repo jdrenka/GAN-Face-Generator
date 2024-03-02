@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grab Avatar</title>
+</head>
+<body>
+    <button id="fetchImage">Fetch Avatar</button>
+    <img id="avatarImage" src="" alt="Avatar will be displayed here" style="display: none;"/>
+    <script>
+        document.getElementById('fetchImage').addEventListener('click', function() {
+            fetch('http://192.168.1.97:5000/generate-image', {
+            })
+                .then(response => response.blob())
+                .then(blob => {
+                    console.log(blob);
+                    const imageUrl = URL.createObjectURL(blob);
+                    document.getElementById('avatarImage').src = imageUrl;
+                    document.getElementById('avatarImage').style.display = 'block';
+                })
+                .catch(error => console.error('Error fetching image:', error));
+        });
+    </script>
+</body>
+</html>
