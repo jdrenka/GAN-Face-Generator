@@ -27,10 +27,11 @@ body {
     animation-fill-mode: both; /* Ensures the element remains visible after the animation */
 }
 
+  
 .login_panel{
     position: absolute;
-    height:70%;
-    width:45%;
+    height: 70%;
+    width: 45%;
     margin-top: 1%;
     margin-left: 26.5%;
     background-color: rgb(125, 141, 169);
@@ -42,7 +43,6 @@ body {
     overflow: hidden; /* Ensure contents do not overflow */
     box-sizing: border-box;
 }
-
 
 #login_backgroundimage{
     position: absolute; 
