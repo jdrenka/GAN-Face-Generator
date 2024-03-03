@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AvatarCreator - Create Account</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:ital@1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('#createAccountForm');
+            form.addEventListener('submit', function(e) {
+                const password = document.querySelector('#password').value;
+                const confirmPassword = document.querySelector('#confirmPassword').value;
+                if (password !== confirmPassword) {
+                    e.preventDefault(); // Prevent form submission
+                    alert('Passwords do not match.');
+                }
+                // Add further actions for form submission here if passwords match
+            });
+        });
+    </script>
+</head>
+<body>
+    <img id="login_backgroundimage" src="images/background.jpg">   
+    <h1 id='mainheader'>SampleGenerator</h1>
+    <h2 id='secondaryheader'>Start generating 100% unique sample images for free!</h2>
+    
+    <div class='login_panel'>
+        <a href="index.html"><img src="images/arrowArt.png" alt="Back to Login" style="position: absolute; top: 10px; left: 10px; cursor: pointer; height: 10%; width: 10%; transform: rotate(0deg); margin-top:2%; margin-left:2%;"></a>
+        <h1 id='createaccountheader'>Create Account</h1>
+        <form id="createAccountForm" action="/createAccount" method="post">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" id = 'createaccountbutton'>Create Account</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

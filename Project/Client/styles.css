@@ -1,30 +1,214 @@
+body, html {
+    overflow-y: hidden;
+  }
+
 h1 {
-    font-family: 'Arial', sans-serif; /* Choose a modern, readable font */
-    font-size: 2.5rem; /* Adjust size as needed */
-    color: #757850; /* Dark gray for contrast against light backgrounds */
+    font-size: 50px;
+    font-weight: 600; /* Semi-bold */
+    font-style: italic; 
+    color: #000000; /* Dark gray for contrast against light backgrounds */
     text-align: center; /* Centers the header text */
-    margin-top: 20px; /* Adds space above the header */
-    margin-bottom: 20px; /* Adds space below the header */
-    text-transform: uppercase; /* Makes the text uppercase for added emphasis */
+    margin-top: 10px; /* Adds space above the header */
+    margin-bottom: 20px; /* Adds space below the header */ /* Makes the text uppercase for added emphasis */
     letter-spacing: 1.5px; /* Increases spacing between letters */
     word-spacing: 3px; /* Increases spacing between words */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.9); /* Subtle shadow for depth */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Subtle shadow for depth */
 }
 
-.app_panel{
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Apply the animation to the body or a main container */
+body {
+    animation-name: fadeIn;
+    animation-duration: 0.2s; /* Adjust the time as needed */
+    animation-fill-mode: both; /* Ensures the element remains visible after the animation */
+}
+
+.login_panel{
     position: absolute;
-    height:95%;
-    width:95%;
+    height:70%;
+    width:45%;
     margin-top: 1%;
-    margin-left: 2%;
-    background-color: rgb(77, 86, 86);
+    margin-left: 26.5%;
+    background-color: rgb(125, 141, 169);
     box-shadow: 8px 8px 6px rgba(0, 0, 0, 0.1), /* Primary shadow */
     4px 4px 4px rgba(0, 0, 0, 0.06), /* Secondary shadow for more depth */
     -8px 0 6px rgba(0, 0, 0, 0.1); /* Primary shadow to the left */
     border-radius: 50px;
+    border: 3px solid black;
+    overflow: hidden; /* Ensure contents do not overflow */
+    box-sizing: border-box;
 }
 
+
+#login_backgroundimage{
+    position: absolute; 
+    height: 100%;
+    width: 105%; 
+    right: 0.025%;
+    margin:0;
+    padding:0; 
+}
+#loginheader{
+    margin-top: 0.25%;
+    margin-bottom: 3%;
+    font-size: 35px;
+}
 
 #mainheader{
-    font-size: 60px;
+    position:relative;
+    z-index: 10;
+    color: rgb(68, 68, 68);
+    font-size: 55px;
+    margin-top: 1.5%;
+    margin-bottom: 1%;
 }
+
+#secondaryheader{
+    margin-top: 0%;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    font-size: 20px;
+    color:rgb(68, 68, 68);
+    font-style: italic; 
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+   
+}
+
+.center-line {
+    position: fixed; /* Keeps the line in place while scrolling */
+    left: 50%; /* Centers the line horizontally */
+    transform: translateX(-50%); /* Ensures the line's center is exactly at the middle */
+    width: 2px; /* Adjust the width of the line as needed */
+    height: 100vh; /* Makes the line stretch from top to bottom */
+    background-color: black; /* Set the color of the line */
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+    margin-left: 27%;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+input[type="text"],
+input[type="password"],
+input[type = "email"] {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+    width: 45%;
+    margin-left: 27%;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 1%;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#forgotpass_first{
+    position:relative;
+    top: 5%; 
+    left: 33%;
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+#forgotpass_second{
+    position: relative;
+    top: 7%;
+    left: 25%; 
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+
+}
+
+#createacctmsg_one{
+    position:relative;
+    top: 14%;
+    left: 33%;
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+
+}
+
+
+#createacctmsg_two{
+    position:relative;
+    top: 15%;
+    left: 27%;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+#createaccountheader{
+    margin-top: 3%;
+    margin-bottom: 1%;
+    font-size: 35px;
+
+}
+#createaccountbutton{
+    position: relative;
+    width: 200px;
+    height: 35px;
+    bottom: 10px;
+    right: 6%;
+}
+
+

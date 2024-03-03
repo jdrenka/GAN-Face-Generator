@@ -5,14 +5,55 @@
 <title>AvatarCreator!</title>
 <link rel="stylesheet" href="styles.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:ital@1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class = 'app_panel'>
 
-        <h1 id = 'mainheader'>AvatarCreator</h1>
+    <img id = "login_backgroundimage" src = "images/background.jpg">   
+    <h1 id = 'mainheader'>SampleGenerator</h1>
+    <h2 id = 'secondaryheader'>Start generating 100% unique sample images for free!</h2>
+    
+    <div class = 'login_panel'>
+        <h1 id = 'loginheader'>Login</h1>
+        <form action="/login" method="post">
+            <div class="form-group">
+                <label for="username">Username/Email:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+
+            <a href = "google.ca" id = 'forgotpass_first'>Forgot your password?</a>
+            <br>
+            <a href = "google.ca" id = 'forgotpass_second'>Click here to reset your password</a>
+            <br>
+            <a id = 'createacctmsg_one' href = 'createAccount.html'>Dont have an account?</a>
+            <br>    
+            <a id = 'createacctmsg_two' href = 'createAccount.html'>Click here to create an account</a>
 
     </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const accountCreated = urlParams.get('accountCreated');
+            if (accountCreated) {
+                alert('Account created successfully!');
+                // Optionally, remove the query parameter from the URL
+                history.pushState(null, '', 'index.html');
+            }
+        });
+        </script>
 </body>
 
 
