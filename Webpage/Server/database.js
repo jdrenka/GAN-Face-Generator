@@ -3,9 +3,9 @@ const mysql = require('mysql2/promise');
 
 const pool = mysql.createPool({
     host: 'localhost',
-    user: 'admin', // Assuming 'root' is your MySQL user
-    password: 'alphabrainsdb', // alphabrainsdb for PC 
-    database: 'samplegenerator',
+    user: 'root', // Assuming 'root' is your MySQL user
+    password: 'Localdbpass1!', // Localdbpass1! for PC mysql   
+    database: 'maindb', //maindb on  pc
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0
