@@ -17,9 +17,13 @@ generator.eval()  # Set to eval mode for inference
 def generate_image():
     # Generate an image with the loaded model
     # You'll need to provide the appropriate input for your model, e.g., a noise vector
-    noise = torch.randn(1, 100)  # Example noise vector; adjust size as needed
+    noise = torch.randn(1, 100)
+
+    # Scale the noise vector by a factor
+    scaled_noise = noise * 2.0  # 
+
     with torch.no_grad():
-        generated_image = generator(noise)
+        generated_image = generator(scaled_noise)
 
     # Save the generated image to a temporary file and send it
     filepath = 'temp_image.png'  # Consider using a temp file or dynamic naming to handle concurrency

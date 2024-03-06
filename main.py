@@ -29,9 +29,11 @@ class Generator(nn.Module):
         return img
 
     def generate_and_save_image(self, input, filepath):
-        with torch.no_grad():  # Ensure gradients aren't calculated
+        with torch.no_grad(): 
             generated_image = self.forward(input)  # Generate the image
             save_image(generated_image, filepath)  # Save image
+
+
 # Define the Discriminator
 class Discriminator(nn.Module):
     def __init__(self):
@@ -86,7 +88,7 @@ discriminator = discriminator.to(device)
 
 if __name__ == '__main__':
 # Training loop
-    epochs = 101  #Set Epoch amount
+    epochs = 101  #Set Epoch amount here
 
     for epoch in range(epochs):
         for i, (images, _) in enumerate(dataloader):
@@ -120,8 +122,8 @@ if __name__ == '__main__':
             if i % 100 == 0:
                 print(
                     f"Epoch [{epoch}/{epochs}], Step [{i}/{len(dataloader)}], Loss D: {loss_d.item()}, Loss G: {loss_g.item()}")
-            if epoch == 100:
-                with torch.no_grad():
+            if epoch == 100: #Condition for when to display results
+                with torch.no_grad(): #Display results
                     fixed_noise = torch.randn(4, 100, device=device)
                     fake_images = generator(fixed_noise).detach().cpu()
                     grid = utils.make_grid(fake_images, nrow=2, normalize=True)

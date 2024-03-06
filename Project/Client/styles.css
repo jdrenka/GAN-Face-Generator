@@ -51,7 +51,7 @@ body {
     right: 0.025%;
     margin:0;
     padding:0; 
-}
+}   
 #loginheader{
     margin-top: 0.25%;
     margin-bottom: 3%;
@@ -66,6 +66,48 @@ body {
     margin-top: 1.5%;
     margin-bottom: 1%;
 }
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    transition: transform 0.1s ease-out, box-shadow 0.2s ease;
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    z-index: -1;
+    transition: opacity 0.3s;
+    border-radius: 5px;
+    opacity: 0;
+  }
+  
+  .button:hover::before {
+    opacity: 1;
+  }
+  
+  .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  
+  .button:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  }
 
 #secondaryheader{
     margin-top: 0%;
@@ -80,6 +122,41 @@ body {
    
 }
 
+.generator_panel {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center children vertically */
+    align-items: center; /* Center children horizontally */
+    width: 50vw; /* 50% of the viewport width */
+    height: 50vh; /* 50% of the viewport height */
+    margin: auto; /* Center the panel in the viewport */
+    background-color: #5c5757; /* White background for the panel */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    padding: 20px; /* Padding inside the panel */
+    overflow: hidden; /* Ensure nothing spills out of the panel */
+  }
+  
+  .button {
+    margin-bottom: 20px; /* Space between the button and the image */
+    /* Add your button styles here */
+  }
+  
+  #avatarImage {
+    width: 500px; /* Responsive image width within the panel */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+     /* Optionally round corners of the image itself */
+    /* The display property will be changed dynamically with JavaScript */
+  }
+  
+  /* Ensure the entire viewport is covered and centered */
+  body, html {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
 .center-line {
     position: fixed; /* Keeps the line in place while scrolling */
     left: 50%; /* Centers the line horizontally */

@@ -3,8 +3,8 @@ const mysql = require('mysql2/promise');
 
 const pool = mysql.createPool({
     host: 'localhost',
-    user: 'root', // Assuming 'root' is your MySQL user
-    password: 'cosc310db',
+    user: 'admin', // Assuming 'root' is your MySQL user
+    password: 'alphabrainsdb', // alphabrainsdb for PC 
     database: 'samplegenerator',
     waitForConnections: true,
     connectionLimit: 10,

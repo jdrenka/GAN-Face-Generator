@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Grab Avatar</title>
+    <link rel="stylesheet" href="/styles.css">
+
 </head>
 <body>
-    <button id="fetchImage">Fetch Avatar</button>
-    <img id="avatarImage" src="" alt="Avatar will be displayed here" style="display: none;"/>
+    <h1>Uncanny 128x128 Generation</h1>
+    <div class="generator_panel">
+        <button class = 'button' id="fetchImage">Fetch Avatar</button>
+        <img id="avatarImage" src="" alt="Avatar will be displayed here" style="display: none;"/>
+    </div>
+
+
     <script>
         document.getElementById('fetchImage').addEventListener('click', function() {
             fetch('http://192.168.1.97:5000/generate-image', {
