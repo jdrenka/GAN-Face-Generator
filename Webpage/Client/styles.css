@@ -22,7 +22,8 @@ h1 {
 h2 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-left: 0.5vw; 
-    margin-top: 3vh;   
+    margin-top: 3vh;  
+    font-size: 1vw; 
 }
 
 @keyframes fadeIn {
@@ -174,11 +175,12 @@ body {
     align-items: center;
     width: 15vw; /* Consider min-width or max-width for responsiveness */
     height: 100vh;
-    background-color: #ffffff;
+    background-color: #939393;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 0px;
     border-radius: 3px;
     margin-left: 0px;
+    overflow:hidden;
 }
 
 .main_panel {
