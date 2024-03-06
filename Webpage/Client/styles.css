@@ -3,16 +3,26 @@ body, html {
   }
 
 h1 {
+    position: absolute;
     font-size: 50px;
     font-weight: 600; /* Semi-bold */
     font-style: italic; 
     color: #000000; /* Dark gray for contrast against light backgrounds */
     text-align: center; /* Centers the header text */
-    margin-top: 10px; /* Adds space above the header */
-    margin-bottom: 20px; /* Adds space below the header */ /* Makes the text uppercase for added emphasis */
+    margin-top: 10px; /* Adds space above the header */ 
     letter-spacing: 1.5px; /* Increases spacing between letters */
     word-spacing: 3px; /* Increases spacing between words */
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Subtle shadow for depth */
+    left: 50vw;
+    transform: translateX(-50%);
+    
+    width: 50%; /* Or any specific value */
+}
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 0.5vw; 
+    margin-top: 3vh;   
 }
 
 @keyframes fadeIn {
@@ -76,6 +86,7 @@ body {
     background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
     color: #fff;
     cursor: pointer;
+    width: 5vw;
     outline: none;
     position: relative;
     transition: transform 0.1s ease-out, box-shadow 0.2s ease;
@@ -121,20 +132,65 @@ body {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
    
 }
-
-.generator_panel {
+.panelgroup{
+    position:relative;
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    justify-content: center; /* Center children vertically */
-    align-items: center; /* Center children horizontally */
-    width: 50vw; /* 50% of the viewport width */
-    height: 50vh; /* 50% of the viewport height */
-    margin: auto; /* Center the panel in the viewport */
-    background-color: #5c5757; /* White background for the panel */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    border-radius: 10px; /* Rounded corners for a modern look */
-    padding: 20px; /* Padding inside the panel */
-    overflow: hidden; /* Ensure nothing spills out of the panel */
+    justify-content: center; /* Center the items horizontally */
+    align-items: start; /* Align items to the start of the cross axis */
+    gap: 0px; /* Optional: adds some space between the two panels */
+    height: 100vh; /* Optional: Adjust height as needed */
+    padding: 0px;
+    margin-left: 0vw;
+}
+
+
+.navbar_selection{
+    position: relative;
+    display: flex;
+    width: 15vw;        
+    height: 9vh;
+    background-color: #575757;
+    border-bottom: 1px solid black;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1; /* Initial opacity */
+}
+
+.navbar_selection:hover{
+    opacity: 0.5; /* Opacity on hover */
+}
+
+.userinfo{
+    position: relative;
+    display: flex;
+    padding:  0px;
+    width: 15vw;
+    height: 12vh;
+    background-color: #838383;
+    border-bottom: 1px solid black;
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15vw; /* Consider min-width or max-width for responsiveness */
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0px;
+    border-radius: 3px;
+    margin-left: 0px;
+}
+
+.main_panel {
+    display: flex;
+    flex-direction: column;
+    width: 85vw; /* Consider using max-width for larger screens */
+    height: 100vh; /* Adjust based on content or use min-height for flexibility */
+    background-color: #5c5757;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    padding: 20px;
+    overflow: hidden;
   }
   
   .button {
@@ -157,16 +213,18 @@ body {
     align-items: center;
     margin: 0;
   }
-.center-line {
-    position: fixed; /* Keeps the line in place while scrolling */
-    left: 50%; /* Centers the line horizontally */
-    transform: translateX(-50%); /* Ensures the line's center is exactly at the middle */
-    width: 2px; /* Adjust the width of the line as needed */
-    height: 100vh; /* Makes the line stretch from top to bottom */
-    background-color: black; /* Set the color of the line */
+
+.white_header{
+    font-size: 4vw;
+    font-weight: 600; /* Semi-bold */
+    font-style: italic; 
+    color: #ffffff; /* Dark gray for contrast against light backgrounds */
+    text-align: center; 
+    margin-bottom: 20px; /* Adds space below the header */ /* Makes the text uppercase for added emphasis */
+    letter-spacing: 1.5px; /* Increases spacing between letters */
+    word-spacing: 3px; /* Increases spacing between words */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Subtle shadow for depth */
 }
-
-
 form {
     display: flex;
     flex-direction: column;
@@ -247,6 +305,39 @@ button[type="submit"]:hover {
     text-decoration: none;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 
+}
+
+
+.logout_button{
+    position:absolute;
+    display: inline-block;
+    font-size: 0.5vw;
+    color: #ffffff;
+    background-color: #007bff; /* A pleasant blue */
+    width: 5vw;
+    height: 3vh;    
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.5;
+    border: none;
+    border-radius: 10px; 
+    margin-top: 2.75vh;
+    margin-left: 1vw;
+    margin-bottom: 0.1vh;
+    right: 0.5vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    outline: none
+}
+
+.logout_button:hover, .logout-button:focus {
+    background-color: #b300a7; /* A darker shade of blue for hover state */
+    transform: scale(1.05); /* Slightly enlarge the button when hovered or focused */
+}
+  
+.logout_button:active {
+    background-color: #004094; /* Even darker for the active state */
+    transform: scale(1); /* Return to original scale when clicked */
 }
 
 #createacctmsg_one{

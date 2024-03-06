@@ -4,17 +4,53 @@
     <meta charset="UTF-8">
     <title>Grab Avatar</title>
     <link rel="stylesheet" href="/styles.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: rgb(11, 16, 18);
+        }
+    </style>
 </head>
 <body>
-    <h1>Uncanny 128x128 Generation</h1>
-    <div class="generator_panel">
-        <button class = 'button' id="fetchImage">Fetch Avatar</button>
-        <img id="avatarImage" src="" alt="Avatar will be displayed here" style="display: none;"/>
+    
+    <div class = 'panelgroup'>
+
+        <div class = 'sidebar'>
+            <div class = 'userinfo'>
+                <h2> <%= username %></h2>
+                <form action="/logout" method="post">
+                        <button class = 'logout_button'>Log out</button>
+                </form>
+            </div>
+
+            <div class = 'navbar_selection'>
+                <h2>Categories</h2>
+            </div>
+
+            <div class = 'navbar_selection'>
+                <h2>Manage Images</h2>
+            </div>
+            
+            <div class = 'navbar_selection'>
+                <h2>oi</h2>
+            </div>
+            
+            <div class = 'navbar_selection'>
+                <h2>oi</h2>
+            </div>
+            
+            
+        </div>
+
+        <div class="main_panel">
+            <h1 class = 'white_header'>Avatar Generator</h1>
+            <button class = 'button' id="fetchImage">Fetch Avatar</button>
+            <img id="avatarImage" src="" alt="Avatar will be displayed here" style="display: none;"/>
+        </div>
+        
     </div>
-    <form action="/logout" method="post">
-        <button type="submit">Logout</button>
-    </form>
+
+    
 
     <script>
         document.getElementById('fetchImage').addEventListener('click', function() {
