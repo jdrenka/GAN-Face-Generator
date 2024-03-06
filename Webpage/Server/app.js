@@ -24,6 +24,15 @@ app.use(express.static(path.join(__dirname, '../Client')));
 
 app.set('view engine', 'ejs');
 
+
+function checkAuthenticated(req, res, next) { // Put in route handler to require auth
+    if (req.session && req.session.userId) { 
+      return next();
+    }
+    return res.redirect('/login');
+  }
+
+//Get routes
 app.get('/', (req, res) => {
     res.redirect('index.html');
 });
@@ -48,16 +57,17 @@ app.get('/grabavatar', (req, res) => {
     });
 });
 
-app.get('/main', (req, res) => {
-    if (req.session.userId) {
-        // User is authenticated, render main.ejs
-        res.render('main', { username: req.session.username });
-    } else {
-        // User is not authenticated, redirect to login
-        res.redirect('/login');
-    }
+
+app.get('/login', (req, res) => {
+    res.redirect('index.html');
 });
 
+app.get('/grab', checkAuthenticated, (req, res) => {
+    res.render('grab', { username: req.session.username });
+});
+
+
+//Post Routes  
 app.post('/createAccount', async (req, res) => {
     try {
       const { username, email, password } = req.body;
@@ -97,7 +107,7 @@ app.post('/login', async (req, res) => {
                 // Passwords match
                 req.session.userId = user.id; // Example of storing user ID
                 req.session.username = user.username;
-                res.render('main', { username: req.session.username });
+                res.render('grab', { username: req.session.username });
             } else {
                 // Passwords do not match, redirect back to login with an error
                 res.redirect('/index.html?error=invalidcredentials');
@@ -122,6 +132,7 @@ app.post('/logout', (req, res) => {
         }
     });
 });
+
 // Start the server
 app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`);

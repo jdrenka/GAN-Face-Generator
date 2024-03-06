@@ -1,8 +1,8 @@
 from flask import Flask, send_file
-import GeneratorAPI.main as main # Import GAN script
+import main as main # Import GAN script
 import torch
 from torchvision.utils import save_image
-from GeneratorAPI.main import Generator
+from main import Generator
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -16,11 +16,11 @@ generator.eval()  # Set to eval mode for inference
 @app.route('/generate-image')
 def generate_image():
     # Generate an image with the loaded model
-    # You'll need to provide the appropriate input for your model, e.g., a noise vector
+    # Noise vector for generator
     noise = torch.randn(1, 100)
 
     # Scale the noise vector by a factor
-    scaled_noise = noise * 2.0  # 
+    scaled_noise = noise * 2.0   
 
     with torch.no_grad():
         generated_image = generator(scaled_noise)

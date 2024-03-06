@@ -12,7 +12,9 @@
         <button class = 'button' id="fetchImage">Fetch Avatar</button>
         <img id="avatarImage" src="" alt="Avatar will be displayed here" style="display: none;"/>
     </div>
-
+    <form action="/logout" method="post">
+        <button type="submit">Logout</button>
+    </form>
 
     <script>
         document.getElementById('fetchImage').addEventListener('click', function() {
