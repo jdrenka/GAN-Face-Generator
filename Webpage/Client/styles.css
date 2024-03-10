@@ -181,11 +181,15 @@ body {
     border-radius: 3px;
     margin-left: 0px;
     overflow:hidden;
+    border-right: 1px solid black;
 }
 
 .main_panel {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
     width: 85vw; /* Consider using max-width for larger screens */
     height: 100vh; /* Adjust based on content or use min-height for flexibility */
     background-color: #5c5757;
@@ -221,11 +225,56 @@ body {
     font-weight: 600; /* Semi-bold */
     font-style: italic; 
     color: #ffffff; /* Dark gray for contrast against light backgrounds */
-    text-align: center; 
+    text-align: left; 
+    margin-left: -7vw;
     margin-bottom: 20px; /* Adds space below the header */ /* Makes the text uppercase for added emphasis */
     letter-spacing: 1.5px; /* Increases spacing between letters */
     word-spacing: 3px; /* Increases spacing between words */
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Subtle shadow for depth */
+}
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Creates a responsive grid */
+    gap: 20px; /* Space between cards */
+    max-width: 1200px; /* Maximum width of the grid */
+    width: 100%; /* Makes the grid width responsive */
+    margin: 20px 0; /* Space above and below the grid */
+    overflow:auto;
+}
+
+.card {
+    text-decoration: none; /* Removes the underline from links */
+    color: black; /* Text color */
+    border: 1px solid #ddd; /* Adds a border around the card */
+    display: block; /* Allows the link to behave like a block, making the entire card clickable */
+    max-width: 300px; /* Maximum width of the card */
+    margin: 20px; /* Margin around the card */
+    transition: transform 0.2s; /* Smooth transformation on hover */
+    overflow: hidden; /* Ensures the content fits within the card */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarges the card on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adds shadow to lift the card off the page */
+}
+
+.card-img {
+    width: 100%; /* Ensures the image covers the width of the card */
+    height: 200px; /* Fixed height for the image */
+    object-fit: cover; /* Ensures the image covers the space without distorting */
+}
+
+.card-content {
+    padding: 15px; /* Padding inside the card around the content */
+}
+
+.card-title {
+    margin-top: 0;
+    margin-bottom: 10px; /* Spacing for the title */
+}
+
+.card-text {
+    margin: 0; /* Resets margin for the paragraph */
 }
 form {
     display: flex;

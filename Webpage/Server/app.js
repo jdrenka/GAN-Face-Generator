@@ -21,6 +21,7 @@ app.use(session({
   }));
 
 app.use(express.static(path.join(__dirname, '../Client')));
+app.use('/images', express.static(path.join(__dirname, 'images')));
 
 app.set('view engine', 'ejs');
 
