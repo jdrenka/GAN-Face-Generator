@@ -1,4 +1,4 @@
-## Avatar Generator
+## AI Avatar Generator
 - Created python script to train GAN based on public face image dataset
 - Simple flask server to display a unique generated face image based on our trained GAN model.
 - Each refresh produces a new image.
