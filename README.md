@@ -1,6 +1,9 @@
 ## AI Face Generator
+- Created by Justin Drenka
+
+## Functionality
 - Created python script to train GAN based on public face image dataset
-- Simple flask server to display a unique generated face image based on our trained GAN model.
+- Simple flask server displays a unique generated face image based on our trained GAN model.
 - Each refresh produces a new image.
 
 ## Google Slides Presentation for Class
