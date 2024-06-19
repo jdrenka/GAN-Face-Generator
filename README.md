@@ -6,9 +6,9 @@
 ## Example Outputs
 
 <p align="center">
-  <img src="./images/face1.png" alt="Feature Image 1" width="200"/>
-  <img src="./images/face2.png" alt="Feature Image 2" width="200"/>
-  <img src="./images/face3.png" alt="Feature Image 3" width="200"/>
+  <img src="./example_images/face1.png" alt="Feature Image 1" width="200"/>
+  <img src="./example_images/face2.png" alt="Feature Image 2" width="200"/>
+  <img src="./example_images/face3.png" alt="Feature Image 3" width="200"/>
 </p>
 
 
