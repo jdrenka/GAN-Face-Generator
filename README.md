@@ -3,6 +3,15 @@
 - Simple flask server to display a unique generated face image based on our trained GAN model.
 - Each refresh produces a new image.
 
+## Example Outputs
+
+<p align="center">
+  <img src="./images/face1.png" alt="Feature Image 1" width="200"/>
+  <img src="./images/face2.png" alt="Feature Image 2" width="200"/>
+  <img src="./images/face3.png" alt="Feature Image 3" width="200"/>
+</p>
+
+
 ## Google Slides Presentation for Class
 
 https://docs.google.com/presentation/d/e/2PACX-1vSeJBOfgCZ2Zo61L4AMSWQX8O_2D01xK1gu-E63RGRJUya2Q98xTi5XKRTkkmstMos1kpRGLzS9cB4x/pub?start=false&loop=false&delayms=3000
