@@ -9,6 +9,8 @@
   <img src="./example_images/face1.PNG" alt="Feature Image 1" width="200"/>
   <img src="./example_images/face2.PNG" alt="Feature Image 2" width="200"/>
   <img src="./example_images/face3.PNG" alt="Feature Image 3" width="200"/>
+  <img src="./example_images/face4.PNG" alt="Feature Image 3" width="200"/>
+  <img src="./example_images/face5.PNG" alt="Feature Image 3" width="200"/>
 </p>
 
 
