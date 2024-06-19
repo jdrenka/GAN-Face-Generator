@@ -2,4 +2,4 @@
 
 ## Google Slides Presentation
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRhEOLPtLx0B021Yq1uagf0Bs6TadA1Y8o76KVyJYDpeiz9zpDgNiX6mgNNI6zUNcqQ_vSegxfpgJHH/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+https://docs.google.com/presentation/d/e/2PACX-1vSeJBOfgCZ2Zo61L4AMSWQX8O_2D01xK1gu-E63RGRJUya2Q98xTi5XKRTkkmstMos1kpRGLzS9cB4x
