@@ -1,5 +1,5 @@
 ## AI Face Generator
-- Created by Justin Drenka
+Created by Justin Drenka
 
 ## Functionality
 - Created python script to train GAN based on public face image dataset
