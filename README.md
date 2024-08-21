@@ -11,6 +11,9 @@ Created by Justin Drenka
 https://docs.google.com/presentation/d/e/2PACX-1vSeJBOfgCZ2Zo61L4AMSWQX8O_2D01xK1gu-E63RGRJUya2Q98xTi5XKRTkkmstMos1kpRGLzS9cB4x/pub?start=false&loop=false&delayms=3000
 
 
+## Model Architechture
+  <img src="https://storage.googleapis.com/portfolio-images-justin/ganstruct.PNG" alt="Feature Image 1" width="800" height="275"/>
+  
 ## Example Outputs
 
 <p align="center">
